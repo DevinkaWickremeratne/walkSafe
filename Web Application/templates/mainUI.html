@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Main Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700|Oswald:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../static/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../static/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="../static/css/aos.css">
+
+    <!-- MAIN CSS -->
+    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+    <div class="site-wrap">
+
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+     
+
+
+      <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+        <div class="container">
+          <div class="row align-items-center position-relative">
+            
+              
+              <div class="site-logo">
+                <a href="index.html" class="text-black"><span class="text-primary">WalkSafe</a>
+              </div>
+              
+              <div class="col-12">
+                <nav class="site-navigation text-right ml-auto " role="navigation">
+
+                  <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                  <li><a href="{{ url_for('main') }}" class="nav-link">Home</a></li>
+                  <li><a href="{{ url_for('main') }}" class="nav-link">Background</a></li>
+                  <li><a href="{{ url_for('main') }}" class="nav-link">Features</a></li>                
+                  <li><a href="{{ url_for('main') }}" class="nav-link">Developer</a></li>
+                 
+                  <!--User Profile with drop down Logout option-->
+                  <li class="has-children">
+                    <a href="#" class="nav-link active">{{ guardian_first_name }}</a>
+                    <ul class="dropdown arrow-top">
+                      <li><a href="{{ url_for('logout') }}" class="nav-link">Logout</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                </nav> 
+              </div>
+
+            <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+          </div>
+        </div>
+        
+      </header>
+      
+      
+      
+      <section class="site-section" style="padding-top: 10px; padding-bottom: 10px">
+        <div class="container-fluid">
+          <div class="row">
+
+            <!--Real-time camera feed from smart cane-->
+            <div class="col-md-3 cameraFeedContainer">
+              <div class="cameraFeed">
+                  <span> Real Time Camera Feed for User 1</span>
+                  <image src="../static/images/video-icon.png" class="video-icon">
+              </div>
+            </div>
+
+            <!--Tracking of user location-->
+            <div class="col-md-9 mapContainer">
+              <div class="map">
+                <span class="box" style="display: inline-block;">Map Container</span>
+                <img src="../static/images/map-icon.png" class="map-icon">
+                <div class=" alertBox box">
+                  <span>SOS Emergency Alert Notification</span>
+                  <image src="../static/images/sos-icon.png" height="50px" width="50px">
+                </div>
+                <div class="batteryBox">
+                  <img src="../static/images/battery-icon.png" class="battery-icon">
+                </div>
+                
+              </div>
+          </div>
+        </div>
+
+          <div class="row">
+
+            <!--Real-time camera feed from smart cane-->
+            <div class="col-md-3 cameraFeedContainer">
+              <div class="cameraFeed" style="float: right;">
+                  <span> Real Time Camera Feed for User 2</span>
+                  <image src="../static/images/video-icon.png" class="video-icon" >           
+              </div>       
+            </div>
+
+            <!--Tracking of user location-->
+            <div class="col-md-9 mapContainer">
+                <div class="map">
+                   <span class="box" style="display: inline-block;">Map Container</span>
+                   <img src="../static/images/map-icon.png" class="map-icon">
+                    <div class=" alertBox box">
+                      <span>SOS Emergency Alert Notification</span>
+                      <image src="../static/images/sos-icon.png" height="50px" width="50px">
+                    </div>
+                <div class="batteryBox">
+                  <img src="../static/images/battery-icon.png" class="battery-icon">
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer" style="padding-bottom: 0px; padding-top: 0px;">
+        <div class="container">
+          <div class="row" style="text-align: center;">
+            <div style="text-align: center; margin: auto">
+                <h2 class="footer-heading mb-4">Follow Us</h2>
+                  <a href="#about-section" class="smoothscroll pl-0 pr-3"><span class="icon-facebook"></span></a>
+                  <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                  <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                  <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+            </div>
+          </div>
+        </div>  
+        </div>
+      </footer>
+    </div>
+
+    <script src="../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/owl.carousel.min.js"></script>
+    <script src="../static/js/jquery.sticky.js"></script>
+    <script src="../static/js/jquery.waypoints.min.js"></script>
+    <script src="../static/js/jquery.animateNumber.min.js"></script>
+    <script src="../static/js/jquery.easing.1.3.js"></script>
+    <script src="../static/js/aos.js"></script>
+    <script src="../static/js/main.js"></script>
+
+  </body>
+</html>
